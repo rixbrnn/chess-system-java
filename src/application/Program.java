@@ -1,9 +1,11 @@
 package application;
 
 import java.util.ArrayList;
+
 import java.util.InputMismatchException;
 import java.util.List;
 import java.util.Scanner;
+
 
 import chess.ChessException;
 import chess.ChessMatch;
@@ -17,7 +19,7 @@ public class Program {
 		ChessMatch chessMatch = new ChessMatch();
 		List<ChessPiece> captured = new ArrayList<>();
 		
-		while(true) {
+		while(!chessMatch.getCheckMate()) {
 			try {
 				UI.clearScreen();
 				UI.printMatch(chessMatch,captured);
@@ -46,6 +48,8 @@ public class Program {
 				sc.nextLine();
 			}
 		}
+		UI.clearScreen();
+		UI.printMatch(chessMatch, captured);
 	}
 
 }
