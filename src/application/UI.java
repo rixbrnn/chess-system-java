@@ -1,6 +1,5 @@
 package application;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.InputMismatchException;
 import java.util.List;
@@ -57,9 +56,9 @@ public class UI {
 		
 		System.out.println("Turn: " + chessMatch.getTurn());
 		if(!chessMatch.getCheckMate()) {
-		System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());	
-			if(chessMatch.getCheck()) {
-				System.out.println("CHECK!");
+			System.out.println("Waiting player: " + chessMatch.getCurrentPlayer());	
+				if(chessMatch.getCheck()) {
+					System.out.println("CHECK!");
 			}
 		}
 		else {
